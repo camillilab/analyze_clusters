@@ -70,8 +70,8 @@ def main():
         bug.get_entrez_data(filename=gbkfile, email=config.email)
 
         # load SOR and sCLIP data onto bug instance
-        sor_data = os.path.join(sor_path, acc_num+'.csv')
-        sclip_data = os.path.join(sclip_path, acc_num+'.csv')
+        sor_data = os.path.join(sor_path, acc_num+'._sor.csv')
+        sclip_data = os.path.join(sclip_path, acc_num+'._sclip.csv')
         bug.load_SOR(sor_data)
         bug.load_sCLIP(sclip_data)
 
