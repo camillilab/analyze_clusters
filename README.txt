@@ -11,8 +11,8 @@ To analyze your own data, first extract SOR and sCLIP reads using the bash scrip
 Then, place these output files in the "SOR Data" and "sCLIP Data" folders within the
 "analyze_clusters" folder. Make sure they are .csv format and the headers include
 "POS" and "TLEN". Name these files according to the reference accession number. For
-example, if analyzing data on C.diff, the files may be named "FN545816.csv" in each
-respective folder. Example data for C.diff has been included.
+example, if analyzing data on C.diff, the files may be named "FN545816_sor.csv" and
+"FN545816_sclip.csv" in each respective folder. Example data for C.diff has been included.
 
 Edit accession_list.txt to include the accession numbers for which inversion analysis
 is to be performed.
