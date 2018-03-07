@@ -482,6 +482,7 @@ class Bug:
         return 'Y'
 
     # sees if there's any inverted repeat complementation
+    # one thing to do is to add another loop to look upstream for more matches
     def align_inverted_repeats(self, inv_pair, seed, start, end, tries, tol):
 
         # grab the sequence upstream and downstream of the inversion switch dictated by start and end
@@ -520,23 +521,27 @@ class Bug:
                         seed_seq = seed_seq + up_seq[i + seed + k]
 
                         # get the downstream seq and its rc
+                        # add to front, because we are looking backwards on the downstream segment
                         d_seq = r_seq[k] + d_seq
                         rc = d_seq.reverse_complement()
 
-                        # check
+                        # check for matching
                         if seed_seq != rc:
                             fails += 1
                             fix_indicies.append(k + seed)
                         else:
                             fails = 0
+
+                        # allow the d_seq to be the seed_seq to allow for continued repeat search despite mismatches
+                        d_seq = seed_seq.reverse_complement()
+
+                        # set the match_seq to the current seed_seq
                         match_seq = seed_seq
 
-                    # turn those mismatches into x's
-                    # mutableseq isn't working; change to string
-
+                    # turn those mismatches into n's
                     match = match_seq.tomutable()
                     for index in fix_indicies:
-                        match[index] = 'x'
+                        match[index] = 'n'
 
                     # lop off fails off the end; these didn't match
                     return match[:-fails]
