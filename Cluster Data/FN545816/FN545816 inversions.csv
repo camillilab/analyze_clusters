@@ -2,7 +2,7 @@ Organism:,Clostridioides difficile R20291
 Accession number:,FN545816
 Number of signals detected,34
 Number of inversion pairs detected,8
-""
+"", ""
 Cluster Number,Inversion start,Start Reads,Inversion end,End reads,Inversion length,Detected inverted repeats around start,Intergenic?,Nearby locus_tags
 1,32280,150,32835,184,555,Nothing found,Y,"['CDR20291_0008', 'CDR20291_0009', 'CDR20291_0010', 'CDR20291_0011', 'CDR20291_0012', 'CDR20291_0013']"
 2,308258,39,308433,121,175,ATAAAA,Y,"['CDR20291_0246', 'CDR20291_0247', 'CDR20291_0248', 'CDR20291_0249', 'CDR20291_0250', 'CDR20291_0251']"
