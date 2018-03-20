@@ -70,8 +70,8 @@ def main():
         bug.get_entrez_data(filename=gbkfile, email=config.email)
 
         # load SOR and sCLIP data onto bug instance
-        sor_data = os.path.join(sor_path, acc_num+'._sor.csv')
-        sclip_data = os.path.join(sclip_path, acc_num+'._sclip.csv')
+        sor_data = os.path.join(sor_path, acc_num+'_sor.csv')
+        sclip_data = os.path.join(sclip_path, acc_num+'_sclip.csv')
         bug.load_SOR(sor_data)
         bug.load_sCLIP(sclip_data)
 
@@ -85,8 +85,8 @@ def main():
         for cluster in clusters:
 
             # try to detect an inversion nt pair
+            print("Processing signal ({0}, {1})...".format(cluster.cluster_start, cluster.cluster_end))
             cluster.detect_inversion_pair()
-            # print(cluster.best_nt_pair)
 
             # if the signal is a clear inversion, add to the instance
             if cluster.is_single_signal != 1:

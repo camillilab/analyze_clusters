@@ -898,7 +898,7 @@ class Cluster:
 
         return
 
-    # analyzes cluster to find the most probable pair of sites of nucleotide inversions (legacy)
+    # analyzes cluster to find the most probable pair of sites of nucleotide inversions
     def detect_inversion_pair(self):
 
         # make frequency histogram of data
