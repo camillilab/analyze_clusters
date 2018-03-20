@@ -6,11 +6,14 @@ inversion sequences.
 
 The ideology is described here: INSERT FINAL DOI HERE
 
-To analyze your own data, first extract SOR and sCLIP reads using the bash scripts.
+To analyze your own data, first extract SOR and sCLIP reads using the bash script reads_analysis.sh.
 
-Then, place these output files in the "SOR Data" and "sCLIP Data" folders within the
-"analyze_clusters" folder. Make sure they are .csv format and the headers include
-"POS" and "TLEN". Name these files according to the reference accession number. For
+Then, run the python executable prepfile.py to convert to csv and add the proper headers.
+
+> python prepfile.py
+
+Place these output files in the "SOR Data" and "sCLIP Data" folders within the
+"analyze_clusters" folder. Name these files according to the reference accession number. For
 example, if analyzing data on C.diff, the files may be named "FN545816_sor.csv" and
 "FN545816_sclip.csv" in each respective folder. Example data for C.diff has been included.
 
