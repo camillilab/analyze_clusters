@@ -4,7 +4,7 @@ This is a series of scripts that extracts same-orientation reads (SOR) and 5'-cl
 reads (sCLIP) from sequencing data and analyzes the patterns for detection of potential 
 inversion sequences.
 
-The ideology is described here: INSERT FINAL DOI HERE
+The ideology is described here: https://doi.org/10.1371/journal.pgen.1007332
 
 To analyze your own data, first extract SOR and sCLIP reads using the bash script reads_analysis.sh.
 
