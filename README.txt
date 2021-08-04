@@ -17,6 +17,8 @@ Place these output files in the "SOR Data" and "sCLIP Data" folders within the
 example, if analyzing data on C.diff, the files may be named "FN545816_sor.csv" and
 "FN545816_sclip.csv" in each respective folder. Example data for C.diff has been included.
 
+When using the manual thresholder, a plot of the SOR data should pop up. To threshold the clusters, click on the graph to draw a horizontal line, representing the maximum amount of clipped reads necessary to be considered a cluster. Then, close the graph window to proceed. Alternatively, automatic threholding is supported - change is_automatic in config.py to True.
+
 Edit accession_list.txt to include the accession numbers for which inversion analysis
 is to be performed.
 
@@ -34,8 +36,9 @@ This requires Python 3.6+ and the following packages:
 If you use these scripts in work contributing to a scientific publication, 
 we ask that you cite our application. Our work is licensed generously.
 
-If you have any questions, comments, ideas, or cool gumbo recipes, please reach us at:
-Ognjen.Sekulovic@tufts.edu
+If you have any questions, comments, ideas, please reach us at:
 jacob.bourgeois@tufts.edu
+
+The github page is checked infrequently, so an email is best!
 
 Thanks and happy hunting!
